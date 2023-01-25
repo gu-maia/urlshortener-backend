@@ -3,7 +3,7 @@ class Url < ApplicationRecord
 
   has_many  :clicks
 
-  validates :address, url: true
+  validates :address, presence: true, url: true
 
   private
 

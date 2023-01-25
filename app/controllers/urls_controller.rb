@@ -8,7 +8,11 @@ class UrlsController < ApplicationController
   def create
     url = Url.create(address: params[:address])
     
-    render json: url
+    if url.save
+      render json: url
+    else
+      render json: url.errors.full_messages
+    end
   end
 
   def show
