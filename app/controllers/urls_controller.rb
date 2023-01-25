@@ -11,6 +11,12 @@ class UrlsController < ApplicationController
     render json: url
   end
 
+  def show
+    url = Url.find_by_key(params[:key])
+    
+    render json: url
+  end
+
   def url_params
     params.permit(:address)
   end

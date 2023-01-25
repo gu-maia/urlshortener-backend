@@ -1,9 +1,9 @@
 class Url < ApplicationRecord
-  after_initialize :set_key
+  before_create :set_key
 
   has_many  :clicks
 
-  validates_presence_of :address
+  validates :address, url: true
 
   private
 
