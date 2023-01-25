@@ -14,14 +14,14 @@ Responses
 200 success
 ```json
 {
-	"id": 01,
-	"address": "http://example.com",
-	"key": "QF3jZQ"
+  "id": 01,
+  "address": "http://example.com",
+  "key": "QF3jZQ"
 },
 {
-	"id": 02,
-	"address": "http://lorem.com",
-	"key": "MTKMPw"
+  "id": 02,
+  "address": "http://lorem.com",
+  "key": "MTKMPw"
 }
 ```
 
@@ -42,21 +42,21 @@ Responses
 201 created
 ```json
 {
-	"id": 01,
-	"address": "http://example.com",
-	"key": "6L0bNg",
-	"clicks_count": null,
-	"created_at": "2023-01-25T22:52:51.839Z",
-	"updated_at": "2023-01-25T22:52:51.839Z"
+  "id": 01,
+  "address": "http://example.com",
+  "key": "6L0bNg",
+  "clicks_count": null,
+  "created_at": "2023-01-25T22:52:51.839Z",
+  "updated_at": "2023-01-25T22:52:51.839Z"
 }
 ```
 
 422 unprocessable entity
 ```json
 {
-	[
-		"Address is not a valid URL"
-	]
+  [
+    "Address is not a valid URL"
+  ]
 }
 ```
 ### Retrieve shortened url by key [GET]
@@ -68,12 +68,12 @@ Responses
 302 found
 ```json
 {
-	"id": 01,
-	"address": "http://example.com",
-	"key": "QF3jZQ",
-	"clicks_count": null,
-	"created_at": "2023-01-25T20:31:44.513Z",
-	"updated_at": "2023-01-25T20:31:44.513Z"
+  "id": 01,
+  "address": "http://example.com",
+  "key": "QF3jZQ",
+  "clicks_count": null,
+  "created_at": "2023-01-25T20:31:44.513Z",
+  "updated_at": "2023-01-25T20:31:44.513Z"
 }
 ```
 404 not found
