@@ -19,7 +19,7 @@ class UrlsController < ApplicationController
     url = Url.find_by_key(params[:key])
     
     if url
-      render json: url, status: :found
+      render json: url, status: :ok
     else
       render json: url, status: :not_found
     end
