@@ -1,4 +1,7 @@
 class UrlsController < ApplicationController
+  include ApiKeyAuthenticable
+
+  prepend_before_action :authenticate_with_api_key!
 
   def index
     urls = Url.all.select(:id, :address, :key)
