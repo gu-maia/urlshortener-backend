@@ -5,6 +5,56 @@ I want to have decoupled [frontend](https://github.com/itsmaia/urlshortener-fron
 ---
 #### Usage
 
+### Create an API key
+
+```
+curl -v -X POST http://localhost:4000/api-keys \
+    -u example@example.com:secret
+```
+
+Responses
+
+201 created
+```json
+{"id":1,"bearer_id":1,"bearer_type":"User","token":"d5bca41ba702551396d792598b599672","created_at":"2023-01-26T22:46:16.522Z","updated_at":"2023-01-26T22:46:16.522Z"}
+```
+
+401 unauthorized
+```json
+{}
+```
+
+### List your API keys
+
+```
+curl -v -X GET http://localhost:4000/api-keys \
+    -H 'Authorization: Bearer d5bca41ba702551396d792598b599672'
+```
+
+Responses
+
+200 ok
+```json
+{"id":1,"bearer_id":1,"bearer_type":"User","token":"d5bca41ba702551396d792598b599672","created_at":"2023-01-26T22:46:16.522Z","updated_at":"2023-01-26T22:46:16.522Z"}
+```
+
+401 unauthorized
+```json
+{}
+```
+### Destroy a API key
+
+```curl -v -X DELETE http://localhost:4000/api-keys \
+    -H 'Authorization: Bearer d5bca41ba702551396d792598b599672'
+```
+
+Responses
+
+```
+HTTP/1.1 204 No Content
+```
+
+
 ### List all shortened urls [GET]
 
 ```/api/urls```
