@@ -44,7 +44,8 @@ Responses
 ```
 ### Destroy a API key
 
-```curl -v -X DELETE http://localhost:4000/api-keys \
+```
+curl -v -X DELETE http://localhost:4000/api-keys \
     -H 'Authorization: Bearer d5bca41ba702551396d792598b599672'
 ```
 
